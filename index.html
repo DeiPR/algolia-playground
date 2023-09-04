@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <!-- for the search only version -->
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        const app = document.getElementById('app')
+        const algolia = algoliasearch('04890NIZ6I','aeb1301a66d104859f8afb11bfd22184')
+        const index = algolia.initIndex('dev_EMPLOYEES')
+
+        index.search('Albert')
+            .then(result => {
+                const hits = result.hits.map(hit => `<p>${hit._highlightResult.firstName.value.replaceAll('em','mark')}</p>`)
+                app.innerHTML = hits.join('')
+            })
+
+    </script>
+</body>
+
+</html>
