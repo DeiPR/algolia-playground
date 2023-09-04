@@ -69,12 +69,12 @@ const run = async () => {
     //     console.log(result)  
     // }
 
-    // const saveMultiple = async () => {
-    //     const employees = require('./employees.json')
-    //     result = await index.saveObjects(employees, { autoGenerateObjectIDIfNotExist: true })     
-    // }
+    const saveMultiple = async () => {
+        const employees = require('./employees.json')
+        result = await index.saveObjects(employees, { autoGenerateObjectIDIfNotExist: true })     
+    }
 
-    // saveMultiple();
+    saveMultiple();
 
     // const saveFromDB = async () => {
     //     pgClient.connect()

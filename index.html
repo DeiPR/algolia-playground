@@ -11,6 +11,7 @@
     <script>
         const app = document.getElementById('app')
         const algolia = algoliasearch('HTXND1U2L1','f38170a81117580d6be1e17e78ead001')
+        
         const index = algolia.initIndex('dev_EMPLOYEES')
 
         index.search('Albert')
