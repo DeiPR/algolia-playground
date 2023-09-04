@@ -1,5 +1,4 @@
 require('dotenv').config()
-const { Client } = require('pg');
 
 const algoliasearch = require('algoliasearch');
 
