@@ -10,16 +10,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [windows]
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node 16.x
+      - name: Setup Node 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: npm
-      - run: yarn install
-      - run: yarn ensure-state
+      - run: npm install
+      - run: npm ensure-state
         env:
           ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           ALGOLIA_APP_KEY: ${{ secrets.ALGOLIA_APP_KEY }}
