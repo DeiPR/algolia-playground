@@ -19,7 +19,7 @@ jobs:
           node-version: 18.x
           cache: npm
       - run: npm install
-      - run: npm ensure-state
+      - run: npm run ensure-state
         env:
           ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           ALGOLIA_APP_KEY: ${{ secrets.ALGOLIA_APP_KEY }}
